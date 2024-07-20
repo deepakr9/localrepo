@@ -1,0 +1,21 @@
+function arrayDiff(a, b){
+    if (a.length === 0){
+        return []
+    }
+    if (b.length === 0){
+        return a
+    }
+
+    newA = a.slice()
+
+    b.forEach(element => {
+        newA = newA.filter(item => item !== element)
+    });
+
+    return newA
+}
+
+let a = ['deepak', 'chiru', 'bharath', 'lohith'];
+let b = ['bharath', 'lohith'];
+
+console.log(arrayDiff(a, b));
